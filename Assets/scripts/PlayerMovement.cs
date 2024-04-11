@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void inputs()
     {
         //force
+        /*
         if(Input.GetKey(KeyCode.Q))
         {
             accX = 1;
@@ -58,9 +59,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             accZ = 0;
-        }
+        }*/
+
 
         //rotate
+        /*
         if (Input.GetKey(KeyCode.R))
         {
             rotateX = 1;
@@ -96,7 +99,13 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rotateZ = 0;
-        }
+        }*/
+        accX = Input.GetAxisRaw("accX");
+        accY = Input.GetAxisRaw("accY");
+        accZ = Input.GetAxisRaw("accZ");
+        rotateX = Input.GetAxisRaw("rotateX");
+        rotateY = Input.GetAxisRaw("rotateY");
+        rotateZ = Input.GetAxisRaw("rotateZ");
     }
 
     void movementUpdate()

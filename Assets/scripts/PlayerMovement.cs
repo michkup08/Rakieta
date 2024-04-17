@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Input")]
     public float accX, accY, accZ;
     public float rotateX, rotateY, rotateZ;
-    [Header("Virables")]
+    [Header("Variables")]
     public float movForce;
     public float rotateSpeed;
     public Vector3 movement, rotation;
@@ -23,7 +23,9 @@ public class PlayerMovement : MonoBehaviour
     void inputs()
     {
         //force
-        
+
+        ////////keyboard controls/////////
+        /*
         if(Input.GetKey(KeyCode.Q))
         {
             accX = 1;
@@ -99,13 +101,18 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rotateZ = 0;
-        }
-        /*accX = Input.GetAxisRaw("accX");
+        }*/
+        
+
+
+        ////////joystick controls////////
+        
+        accX = Input.GetAxisRaw("accX");
         accY = Input.GetAxisRaw("accY");
         accZ = Input.GetAxisRaw("accZ");
         rotateX = Input.GetAxisRaw("rotateX");
         rotateY = Input.GetAxisRaw("rotateY");
-        rotateZ = Input.GetAxisRaw("rotateZ");*/
+        rotateZ = Input.GetAxisRaw("rotateZ");
     }
 
     void movementUpdate()

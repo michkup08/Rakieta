@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void inputs()
     {
         //force
-        /*
+        
         if(Input.GetKey(KeyCode.Q))
         {
             accX = 1;
@@ -59,11 +59,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             accZ = 0;
-        }*/
+        }
 
 
         //rotate
-        /*
+        
         if (Input.GetKey(KeyCode.R))
         {
             rotateX = 1;
@@ -99,20 +99,21 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rotateZ = 0;
-        }*/
-        accX = Input.GetAxisRaw("accX");
+        }
+        /*accX = Input.GetAxisRaw("accX");
         accY = Input.GetAxisRaw("accY");
         accZ = Input.GetAxisRaw("accZ");
         rotateX = Input.GetAxisRaw("rotateX");
         rotateY = Input.GetAxisRaw("rotateY");
-        rotateZ = Input.GetAxisRaw("rotateZ");
+        rotateZ = Input.GetAxisRaw("rotateZ");*/
     }
 
     void movementUpdate()
     {
-        movement = new Vector3(accX, accY, accZ) * movForce;
+        movement = (accX * gameObject.transform.right + accY * gameObject.transform.up + accZ * gameObject.transform.forward) * movForce;
         rotation += new Vector3(rotateX, rotateY, rotateZ) * rotateSpeed ;
         rotation *= (float)Math.Pow(0.95f, 60 * Time.deltaTime);
+
     }
 
     void movementExecute()

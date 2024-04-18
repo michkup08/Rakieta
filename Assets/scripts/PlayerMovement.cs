@@ -117,8 +117,10 @@ public class PlayerMovement : MonoBehaviour
 
     void movementUpdate()
     {
-        movement = (accX * gameObject.transform.right + accY * gameObject.transform.up + accZ * gameObject.transform.forward) * movForce;
-        rotation += new Vector3(rotateX, rotateY, rotateZ) * rotateSpeed ;
+
+
+        movement = (accX * gameObject.transform.right + accY * gameObject.transform.up + accZ * gameObject.transform.forward) * movForce * Time.deltaTime;
+        rotation += new Vector3(rotateX, rotateY, rotateZ) * rotateSpeed * Time.deltaTime;
         rotation *= (float)Math.Pow(0.95f, 60 * Time.deltaTime);
 
     }

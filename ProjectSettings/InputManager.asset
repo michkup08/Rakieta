@@ -339,7 +339,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 0
+    axis: 2
     joyNum: 1
   - serializedVersion: 3
     m_Name: rotateX
@@ -356,7 +356,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 3
-    joyNum: 3
+    joyNum: 2
   - serializedVersion: 3
     m_Name: rotateY
     descriptiveName: 
@@ -372,7 +372,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 4
-    joyNum: 3
+    joyNum: 2
   - serializedVersion: 3
     m_Name: rotateZ
     descriptiveName: 
@@ -387,6 +387,6 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 0
-    joyNum: 3
+    axis: 2
+    joyNum: 2
   m_UsePhysicalKeys: 1

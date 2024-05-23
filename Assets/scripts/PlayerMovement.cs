@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     void movementExecute()
     {
         rigidbody.AddForce(movement, ForceMode.Acceleration);
-        rigidbody.velocity *= (float) Math.Pow(0.99f, 60 * Time.deltaTime);
+        rigidbody.velocity *= (float) Math.Pow(0.95f, 60 * Time.deltaTime);
         
         
         transform.Rotate(rotation);

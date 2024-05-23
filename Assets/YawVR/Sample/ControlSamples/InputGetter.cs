@@ -12,7 +12,7 @@ public class InputGetter : MonoBehaviour
 
     public List<float> prevAccelerationX, prevAccelerationY, prevAccelerationZ, prevRotationX, prevRotationY, prevRotationZ;
 
-    public int frameCount = 30;
+    private int frameCount = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -50,44 +50,44 @@ public class InputGetter : MonoBehaviour
         //force
 
         ////////keyboard controls/////////
-        
-        if (Input.GetKey(KeyCode.Q))
-        {
-            accelerationX = 1;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            accelerationX = -1;
-        }
-        else
-        {
-            accelerationX = 0;
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            accelerationY = 1;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            accelerationY = -1;
-        }
-        else
-        {
-            accelerationY = 0;
-        }
-        if (Input.GetKey(KeyCode.E))
-        {
-            accelerationZ = 1;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            accelerationZ = -1;
-        }
-        else
-        {
-            accelerationZ = 0;
-        }
-        
+
+        //if (Input.GetKey(KeyCode.Q))
+        //{
+        //    accelerationX = 1;
+        //}
+        //else if (Input.GetKey(KeyCode.A))
+        //{
+        //    accelerationX = -1;
+        //}
+        //else
+        //{
+        //    accelerationX = 0;
+        //}
+        //if (Input.GetKey(KeyCode.W))
+        //{
+        //    accelerationY = 1;
+        //}
+        //else if (Input.GetKey(KeyCode.S))
+        //{
+        //    accelerationY = -1;
+        //}
+        //else
+        //{
+        //    accelerationY = 0;
+        //}
+        //if (Input.GetKey(KeyCode.E))
+        //{
+        //    accelerationZ = 1;
+        //}
+        //else if (Input.GetKey(KeyCode.D))
+        //{
+        //    accelerationZ = -1;
+        //}
+        //else
+        //{
+        //    accelerationZ = 0;
+        //}
+
         /*
         //rotate
 
@@ -132,10 +132,10 @@ public class InputGetter : MonoBehaviour
 
         ////////joystick controls////////
 
-       /* accelerationX = Input.GetAxisRaw("accX");
-        accelerationY = Input.GetAxisRaw("accY");
-        accelerationZ = Input.GetAxisRaw("accZ");
-       */
+        accelerationX = -Input.GetAxisRaw("accX");
+        accelerationY = -Input.GetAxisRaw("accY");
+        accelerationZ = -Input.GetAxisRaw("accZ");
+
         rotationX = Input.GetAxisRaw("rotateX");
         rotationY = Input.GetAxisRaw("rotateY");
         rotationZ = Input.GetAxisRaw("rotateZ");

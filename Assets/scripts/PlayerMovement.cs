@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float movForce;
     public float rotateSpeed;
     public Vector3 movement, rotation;
-
+    public SimpleOrientationCopy orientationCopy;
     public InputGetter inputGetter;
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-        movement = (inputGetter.accelerationX * gameObject.transform.right + inputGetter.accelerationY * gameObject.transform.up + inputGetter.accelerationZ * gameObject.transform.forward) * movForce * Time.deltaTime;
+        movement = (inputGetter.accelerationX * gameObject.transform.right + inputGetter.accelerationY * gameObject.transform.up + inputGetter.accelerationZ * gameObject.transform.forward * 10) * movForce * Time.deltaTime;
         rotation += new Vector3(inputGetter.rotationX, inputGetter.rotationY, inputGetter.rotationZ) * rotateSpeed * Time.deltaTime;
         rotation *= (float)Math.Pow(0.95f, 60 * Time.deltaTime);
 

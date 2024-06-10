@@ -47,98 +47,108 @@ public class InputGetter : MonoBehaviour
         prevRotationZ.Add(rotationZ);
 
 
+
+        bool movementKeyboard = false;
+        bool rotationKeyboard = false;
+
+
         //force
 
         ////////keyboard controls/////////
+        if (movementKeyboard)
+        {
+            if (Input.GetKey(KeyCode.Q))
+            {
+                accelerationX = 1;
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                accelerationX = -1;
+            }
+            else
+            {
+                accelerationX = 0;
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                accelerationY = 1;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                accelerationY = -1;
+            }
+            else
+            {
+                accelerationY = 0;
+            }
+            if (Input.GetKey(KeyCode.E))
+            {
+                accelerationZ = 1;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                accelerationZ = -1;
+            }
+            else
+            {
+                accelerationZ = 0;
+            }
+        }
+        else
+        {
+            accelerationX = -Input.GetAxisRaw("accX");
+            accelerationY = -Input.GetAxisRaw("accY");
+            accelerationZ = -Input.GetAxisRaw("accZ");
+        }
 
-        //if (Input.GetKey(KeyCode.Q))
-        //{
-        //    accelerationX = 1;
-        //}
-        //else if (Input.GetKey(KeyCode.A))
-        //{
-        //    accelerationX = -1;
-        //}
-        //else
-        //{
-        //    accelerationX = 0;
-        //}
-        //if (Input.GetKey(KeyCode.W))
-        //{
-        //    accelerationY = 1;
-        //}
-        //else if (Input.GetKey(KeyCode.S))
-        //{
-        //    accelerationY = -1;
-        //}
-        //else
-        //{
-        //    accelerationY = 0;
-        //}
-        //if (Input.GetKey(KeyCode.E))
-        //{
-        //    accelerationZ = 1;
-        //}
-        //else if (Input.GetKey(KeyCode.D))
-        //{
-        //    accelerationZ = -1;
-        //}
-        //else
-        //{
-        //    accelerationZ = 0;
-        //}
 
-        /*
         //rotate
 
-        if (Input.GetKey(KeyCode.R))
+        if (rotationKeyboard)
         {
-            rotationX = 1;
-        }
-        else if (Input.GetKey(KeyCode.F))
-        {
-            rotationX = -1;
+            if (Input.GetKey(KeyCode.R))
+            {
+                rotationX = 1;
+            }
+            else if (Input.GetKey(KeyCode.F))
+            {
+                rotationX = -1;
+            }
+            else
+            {
+                rotationX = 0;
+            }
+            if (Input.GetKey(KeyCode.T))
+            {
+                rotationY = 1;
+            }
+            else if (Input.GetKey(KeyCode.G))
+            {
+                rotationY = -1;
+            }
+            else
+            {
+                rotationY = 0;
+            }
+            if (Input.GetKey(KeyCode.Y))
+            {
+                rotationZ = 1;
+            }
+            else if (Input.GetKey(KeyCode.H))
+            {
+                rotationZ = -1;
+            }
+            else
+            {
+                rotationZ = 0;
+            }
         }
         else
         {
-            rotationX = 0;
+            rotationX = Input.GetAxisRaw("rotateX");
+            rotationY = Input.GetAxisRaw("rotateY");
+            rotationZ = Input.GetAxisRaw("rotateZ");
         }
-        if (Input.GetKey(KeyCode.T))
-        {
-            rotationY = 1;
-        }
-        else if (Input.GetKey(KeyCode.G))
-        {
-            rotationY = -1;
-        }
-        else
-        {
-            rotationY = 0;
-        }
-        if (Input.GetKey(KeyCode.Y))
-        {
-            rotationZ = 1;
-        }
-        else if (Input.GetKey(KeyCode.H))
-        {
-            rotationZ = -1;
-        }
-        else
-        {
-            rotationZ = 0;
-        }
-        */
-
-
-        ////////joystick controls////////
-
-        accelerationX = -Input.GetAxisRaw("accX");
-        accelerationY = -Input.GetAxisRaw("accY");
-        accelerationZ = -Input.GetAxisRaw("accZ");
-
-        rotationX = Input.GetAxisRaw("rotateX");
-        rotationY = Input.GetAxisRaw("rotateY");
-        rotationZ = Input.GetAxisRaw("rotateZ");
     }
 
     // Update is called once per frame

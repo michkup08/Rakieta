@@ -46,10 +46,10 @@ public class InputGetter : MonoBehaviour
         prevRotationZ.RemoveAt(0);
         prevRotationZ.Add(rotationZ);
 
+        
 
-
-        bool movementKeyboard = true;
-        bool rotationKeyboard = true;
+        bool movementKeyboard = false;
+        bool rotationKeyboard = false;
 
 
         //force

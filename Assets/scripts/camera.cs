@@ -24,6 +24,5 @@ public class camera : MonoBehaviour
         transform.Rotate(defaultCurrentFrame);
         defaultLastFrame = gameObject.transform.rotation.eulerAngles;
         yawLastFrame = simpleOrientationCopy.rotation;
-
     }
 }

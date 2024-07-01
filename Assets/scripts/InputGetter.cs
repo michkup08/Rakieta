@@ -48,8 +48,8 @@ public class InputGetter : MonoBehaviour
 
         
 
-        bool movementKeyboard = false;
-        bool rotationKeyboard = false;
+        bool movementKeyboard = true;
+        bool rotationKeyboard = true;
 
 
         //force

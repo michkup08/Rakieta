@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lubudubu : MonoBehaviour
+public class Restart : MonoBehaviour
 {
     public bool explosions = false;
     public GameObject explosion;

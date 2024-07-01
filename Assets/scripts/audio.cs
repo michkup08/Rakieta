@@ -5,7 +5,7 @@ using UnityEngine;
 public class audio : MonoBehaviour
 {
 
-    public lubudubu lubudububu;
+    public Restart restart;
     public AudioClip audio11;
     public AudioClip audio12;
     public AudioClip audio13;
@@ -36,7 +36,6 @@ public class audio : MonoBehaviour
 
     void Start()
     {
-
         if (audioAll.Length > 0)
         {
             PlayNextClip();
@@ -61,7 +60,7 @@ public class audio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lubudububu.explosions && !nowExplosion)
+        if (restart.explosions && !nowExplosion)
         {
             audioEvent.clip = audio11;
             audioEvent2.clip = audio12;
@@ -70,7 +69,7 @@ public class audio : MonoBehaviour
             audioEvent2.PlayOneShot(audio12);
             nowExplosion = true;
         }
-        if (!lubudububu.explosions)
+        if (!restart.explosions)
         {
             nowExplosion = false;
 

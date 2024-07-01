@@ -19,7 +19,6 @@ public class SimpleOrientationCopy : MonoBehaviour
     public float rotationForceY;
     public float rotationForceZ;
 
-
     private void Start()
     {
         yawController = YawController.Instance();
@@ -32,8 +31,6 @@ public class SimpleOrientationCopy : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
-
         //for (int i = 0; i <= inputGetter.frameCount; i++)
         //{
 
@@ -42,14 +39,10 @@ public class SimpleOrientationCopy : MonoBehaviour
         //    rotation.z += (i - inputGetter.frameCount / 2) * (-inputGetter.prevAccelerationX[i] - inputGetter.prevRotationZ[i]);
 
         //}
-
-        
+  
         //rotation.x += 30 * (-inputGetter.accelerationZ - inputGetter.rotationX);
         //rotation.y += 30 * -inputGetter.rotationY;
         //rotation.z += 30 * -(inputGetter.accelerationX - inputGetter.rotationZ);
-
-
-
 
         rotationDel.x += rotationForceX * (inputGetter.prevAccelerationZ[0] - inputGetter.prevRotationX[0]);
         rotationDel.y += rotationForceY * -inputGetter.prevRotationY[0];
@@ -59,10 +52,8 @@ public class SimpleOrientationCopy : MonoBehaviour
         rotationDel.y -= rotationForceY * -inputGetter.prevRotationY[1];
         rotationDel.z -= rotationForceZ * (-inputGetter.prevAccelerationX[1] - inputGetter.prevRotationZ[1]);
 
-
-        if (rotationDel.x > 0)
-            rotationDel.x *= 0.7f;
-
+        //if (rotationDel.x > 0)
+        //    rotationDel.x *= 0.7f; 
 
         rotationDel.x = loggg(rotationDel.x);
         rotationDel.y = loggg(rotationDel.y);
@@ -72,29 +63,11 @@ public class SimpleOrientationCopy : MonoBehaviour
 
         rotation *= 0.99f;
         
-
         yawController.TrackerObject.SetRotation(rotation);
-    }
-
-    private float erf(float x)
-    {
-        float a1 = 0.254829592f;
-        float a2 = -0.284496736f;
-        float a3 = 1.421413741f;
-        float a4 = -1.453152027f;
-        float a5 = 1.061405429f;
-        float p = 0.3275911f;
-
-        int sign = (x > 0 ? 1 : -1);
-        x = Mathf.Abs(x);
-
-        float t = 1f / (1f + p * x);
-        return sign * (1f - (((((a5 * t + a4) * t + a3) * t + a2) * t + a1) * t * Mathf.Exp(x * x)));
     }
 
     private float loggg(float x)
     {
-
         int sign = (x > 0 ? 1 : -1);
         x = Mathf.Abs(x);
 

@@ -3647,6 +3647,7 @@ Transform:
   - {fileID: 399460373}
   - {fileID: 647323963}
   - {fileID: 1239450577}
+  - {fileID: 1774152767}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &703741715
@@ -4074,6 +4075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: YawUI (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1270163095460072, guid: 2bc661d94c1e14567afb101148bd8a54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224948219143996442, guid: 2bc661d94c1e14567afb101148bd8a54, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4160,11 +4165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 646890204362732540, guid: 2bc661d94c1e14567afb101148bd8a54, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.276
       objectReference: {fileID: 0}
     - target: {fileID: 646890204362732540, guid: 2bc661d94c1e14567afb101148bd8a54, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 646890205804465879, guid: 2bc661d94c1e14567afb101148bd8a54, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -7711,7 +7716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1269497467
 Transform:
   m_ObjectHideFlags: 0
@@ -9420,7 +9425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1767453603
 Transform:
   m_ObjectHideFlags: 0
@@ -9501,7 +9506,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 682826083}
     m_Modifications:
     - target: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
       propertyPath: m_RootOrder
@@ -9521,15 +9526,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.1
+      value: -864.9599
       objectReference: {fileID: 0}
     - target: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -879
+      value: -1234.1106
       objectReference: {fileID: 0}
     - target: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 316
+      value: 463.48682
       objectReference: {fileID: 0}
     - target: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9537,15 +9542,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -9556,6 +9561,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
+--- !u!4 &1774152767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 418172, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
+  m_PrefabInstance: {fileID: 1774152766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1798570904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12199,15 +12209,14 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1774152766}
   - {fileID: 52914726}
+  - {fileID: 1753668616}
   - {fileID: 734352397}
   - {fileID: 12207367}
   - {fileID: 1806245628}
   - {fileID: 2019914617}
   - {fileID: 885751384}
-  - {fileID: 768404081}
-  - {fileID: 1753668616}
   - {fileID: 682826083}
   - {fileID: 808049615}
   - {fileID: 703741715}
+  - {fileID: 768404081}
